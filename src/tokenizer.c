@@ -4,14 +4,14 @@
 
 int space_char(char c){ //return True if non-zero, if space char
   //first grab the c and check if it matches space type char
-  if(*c=='\t' || ' '){
+  if(c=='\t' || ' '){
     return 1;
   }
   return 0;
 }
 
 int non_space_char(char c){ //return True if non-space char
-  if(*c!='\t' || ' '){
+  if(c!='\t' || ' '){
     return 1;
   }
   return 0;
@@ -19,7 +19,7 @@ int non_space_char(char c){ //return True if non-space char
 
 char *word_start(char *str){ //return the start, or first, char of the string (return pointer)
   while(*str!='\0'){
-    if(non_space_char(char c)==0){
+    if(non_space_char(*str)==0){
       return str;
     }
     return 0;
@@ -29,10 +29,10 @@ char *word_start(char *str){ //return the start, or first, char of the string (r
 
 char *word_end(char *str){ //return the end, or last, char of the string (refer to Git)
   while(*str!='\0'){
-    if(space_char(char c)==0){//if the pointer is at a space char
+    if(space_char(*str)==0){//if the pointer is at a space char
       return *str-1;//returning what was before the space char
     }
-    str++
+    str++;
    }
 }
 
@@ -48,22 +48,27 @@ int count_words(char *str){ //return the amount of words in the string (counting
 }
 
 char *copy_str(char *inStr, short len){ //returns string and the amount of char in it
+  return 0;
 
 }
 
 //Tokenizer
 char **tokenize(char* str){
+  return 0;
 
 }
 
 void print_tokens(char **tokens){
+  return 0;
 
 }
 
 char *get_token(char **tokens, int id){
+  return 0;
 
 }
 
 void free_tokens(char **tokens){
+  return 0;
 
 }
