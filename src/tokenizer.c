@@ -1,74 +1,26 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include "tokenizer.h"
 
-//My tokenizer
-
-int space_char(char c){ //return True if non-zero, if space char
-  //first grab the c and check if it matches space type char
-  if(c=='\t' || ' '){
-    return 1;
-  }
-  return 0;
-}
-
-int non_space_char(char c){ //return True if non-space char
-  if(c!='\t' || ' '){
-    return 1;
-  }
-  return 0;
-}
-
-char *word_start(char *str){ //return the start, or first, char of the string (return pointer)
-  while(*str!='\0'){
-    if(non_space_char(*str)==0){
-      return str;
+char **tokenize(char *str){
+  int limit= count_words(str);
+  //array created to hold amount of words
+  char array= (char *)malloc(sizeof(char) * limit);
+  //pointer for list of words
+  char **words=(char **)malloc(sizeof(char *) * limit);
+  //for loop to grab those words and put them into the array
+  int length = 20;//hardcoding for testing
+  for(char **str; char **str < length; char **str ++){ //made another pointer to traverse thru str
+    for(char **words; char **words < limit-1; char **words++){//inner for loop for array
+      //check if a space character
+      if(char **str == '/t' or '/0'){
+	char **str-1==array[char **words];
+	//pointer will minus 1 to get rid of space_charcter and keep those characters as one word
+      }
     }
-    return 0;
-    str++;
   }
-}
+  printf(char array);//printing the entire array
 
-char *word_end(char *str){ //return the end, or last, char of the string (refer to Git)
-  while(*str!='\0'){
-    if(space_char(*str)==0){//if the pointer is at a space char
-      return *str-1;//returning what was before the space char
-    }
-    str++;
-   }
-}
-
-int count_words(char *str){ //return the amount of words in the string (counting spaces)
-  int count=0;
-  while(*str!='\0'){
-    if(*str=='\t' || ' '){
-      count++;
-    }
-    str++;
-  }
-  return count;//returning the value of count, AKA amount of words
-}
-
-char *copy_str(char *inStr, short len){ //returns string and the amount of char in it
   return 0;
-
 }
-
-//Tokenizer
-char **tokenize(char* str){
-  return 0;
-
-}
-
-void print_tokens(char **tokens){
-  return 0;
-
-}
-
-char *get_token(char **tokens, int id){
-  return 0;
-
-}
-
-void free_tokens(char **tokens){
-  return 0;
-
-}
+      
